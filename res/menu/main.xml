@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:id="@+id/group1" >
+        <item
+            android:id="@+id/mi_wallpaper"
+            android:title="设置壁纸"/>
+        <item
+            android:id="@+id/mi_installApp"
+            android:title="安装应用"/>
+        <item
+            android:id="@+id/action_settings"
+            android:orderInCategory="100"
+            android:showAsAction="never"
+            android:title="@string/action_settings">
+        </item>
+    </group>
+    <item android:title="系统设置">
+    <menu>
+        <item android:id="@+id/mi_display_setting"
+            android:title="显示设置"/>
+        <item android:id="@+id/mi_network_setting"
+            android:title="网络设置"/>
+        <!-- 别的菜单项 -->
+    </menu>
+</item>
+</menu>

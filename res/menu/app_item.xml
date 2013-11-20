@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mi_appitem_open"
+        android:enabled="false"
+        android:title="打开">
+    </item>
+    <item
+        android:id="@+id/mi_appitem_remove"
+        android:checked="true"
+        android:enabled="true"
+        android:title="卸载"
+        android:visible="true">
+    </item>
+    <item
+        android:title="打开"
+        android:visible="false">
+    </item>
+
+</menu>
