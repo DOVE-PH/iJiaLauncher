@@ -1,5 +1,8 @@
 package com.ijia.ijialauncher;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,12 +26,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	private int i = 0;
 
 	Timer timer = new Timer();
-
+	SimpleDateFormat tFormat= new SimpleDateFormat("HH:mm\nEEEE");
 	private Handler handler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
 			//super.handleMessage(msg);
-			
+			((Button)findViewById(R.id.btnDate)).setText(tFormat.format(new Date()));
 		}
 	};
 
@@ -57,6 +60,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			}
 		}
 
+		tFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
 		timer.scheduleAtFixedRate(new TimerTask() {
 			@Override
 			public void run() {
@@ -66,7 +70,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				mesasge.what = i;
 				handler.sendMessage(mesasge);
 			}
-		}, 0, 1 * 60 * 1000);
+		}, 0, 10 * 1000);
 	}
 
 	@Override
