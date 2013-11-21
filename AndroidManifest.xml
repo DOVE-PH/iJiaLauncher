@@ -21,8 +21,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
                 <!--Launcher桌面程序的关键是设置以下两个节点值-->
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" /> -->
             </intent-filter>
         </activity>
         <activity android:name="com.ijia.ijialauncher.Apps" >
