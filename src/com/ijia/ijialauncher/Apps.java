@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import com.ijia.ijialauncher.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;
@@ -14,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -61,7 +60,15 @@ public class Apps extends Activity implements OnItemClickListener {
 				.getTag();
 		switch (item.getItemId()) {
 		case R.id.mi_appitem_remove:
-			Alert(this, "确认", "确定要卸载" + values.get("Label").toString() + "吗？");
+		// Alert(this, "确认", "确定要卸载" + values.get("Label").toString() + "吗？");
+		{
+			Uri packageURI = Uri.parse("package:"
+					+ values.get("PackageName").toString());
+			// 创建Intent意图
+			Intent intent = new Intent(Intent.ACTION_DELETE, packageURI);
+			// 执行卸载程序
+			startActivity(intent);
+		}
 			break;
 		default:
 			return super.onContextItemSelected(item);

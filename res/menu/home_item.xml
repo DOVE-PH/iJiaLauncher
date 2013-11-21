@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mi_home_selectapp"
+        android:title="选择应用">
+    </item>
+    <item
+        android:id="@+id/mi_home_rename"
+        android:title="重命名">
+    </item>
+    <item
+        android:id="@+id/mi_home_delete"
+        android:title="删除">
+    </item>
+
+</menu>
