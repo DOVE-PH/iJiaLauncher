@@ -1,25 +1,36 @@
 package com.ijia.ijialauncher;
 
-import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
-import android.view.View.OnCreateContextMenuListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.AdapterView.AdapterContextMenuInfo;
 
 public class MainActivity extends Activity implements OnClickListener {
 
-	private Button btnApps;
+	private int i = 0;
+
+	Timer timer = new Timer();
+
+	private Handler handler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			//super.handleMessage(msg);
+			
+		}
+	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +56,17 @@ public class MainActivity extends Activity implements OnClickListener {
 				v.setOnCreateContextMenuListener(this);
 			}
 		}
+
+		timer.scheduleAtFixedRate(new TimerTask() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				i++;
+				Message mesasge = new Message();
+				mesasge.what = i;
+				handler.sendMessage(mesasge);
+			}
+		}, 0, 1 * 60 * 1000);
 	}
 
 	@Override
