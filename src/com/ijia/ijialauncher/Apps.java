@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import com.iijia.ijialauncher.R;
+import com.ijia.ijialauncher.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

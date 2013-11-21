@@ -2,7 +2,7 @@ package com.ijia.ijialauncher;
 
 import java.util.HashMap;
 import java.util.List;
-import com.iijia.ijialauncher.R;
+import com.ijia.ijialauncher.R;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;

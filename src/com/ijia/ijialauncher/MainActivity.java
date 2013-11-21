@@ -1,6 +1,7 @@
 package com.ijia.ijialauncher;
 
-import com.iijia.ijialauncher.R;
+import com.ijia.ijialauncher.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,6 +42,15 @@ public class MainActivity extends Activity {
 				// finish();//停止当前的Activity,如果不写,则按返回键会跳转回原来的Activity
 			}
 		});
+	}
+	private void  addWidget() {
+		 
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO 自动生成的方法存根
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
